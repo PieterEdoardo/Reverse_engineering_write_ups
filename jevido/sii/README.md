@@ -1,5 +1,7 @@
-```
+All credit for this binary goes to the writer and compiler Jevido https://github.com/jevido
+
 First things first;
+```
 ~/Projects/Reverse_Engineering/jevido_bins
 ❯ checksec file sii
 
