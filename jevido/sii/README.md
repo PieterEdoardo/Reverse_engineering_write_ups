@@ -55,4 +55,4 @@ And there it is. I didn't find the extra text, so let's search for that in Ghidr
                  73 75 70 
                  20 7b 73 
 ```
-it's honestly not completely clear to me how and where this text then get's called in the user code to be printed out, but here they are. This seems to be all there is, short but sweet, nice to see a less popular language!
+It's honestly not completely clear to me how and where this text then get's called in the user code to be printed out, but here they are. This seems to be all there is, short but sweet, nice to see a less popular language!
