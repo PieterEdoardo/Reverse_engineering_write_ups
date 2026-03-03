@@ -18,11 +18,14 @@ No RELRO        Canary Found      Unknown           NX enabled    PIE Disabled  
 sii: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
 ```
 Nothing out of the ordinary so far, apart from being purely 64, rather then x86_64.
-One of the first things showing up in Ghidra is `fs.File.stdin`
+One of the first things showing up in Ghidra is `fs.File.stdin`.
 
 <img width="390" height="35" alt="image" src="https://github.com/user-attachments/assets/fea062d9-9db8-40ab-a7a2-da2bde2eea5b" />
+
 After looking this up it seems to belong to Zig, which upon looking up appears to be a general-purpose programming language attemting to impove on C. This seems to make sense so far. This little piece of code Ghidra decompiles with a for loop in front of it.
+
 <img width="268" height="90" alt="image" src="https://github.com/user-attachments/assets/115bc4e8-0f36-40a5-b7f6-4558f3c02877" />
+
 Since it's 4kb in bytes, I'll assume for now this is likely a buffer. Maybe even added by the compiler and not actually user code.
 This code patterns seems to continue and flow in pseudo code:
 ```
