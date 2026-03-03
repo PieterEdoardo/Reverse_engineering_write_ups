@@ -19,7 +19,7 @@ No RELRO        Canary Found      Unknown           NX enabled    PIE Disabled  
 ❯ file yes
 yes: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=db04d9fbd1eaf9f5deaf68dde4e71e03ac240201, not stripped
 ```
-So firsrt off, this binary was about ~100MB, which is incredibly large. Also on first glance it seems to be different then Jevido's other bin; sii. This one is x86_64, rather then just 64, is also dinamically linked instead of statically. So, I am just going to assume I won't be able to use my experience from the other one for this one.
+So firsrt off, this binary was about ~100MB, which is incredibly large. Also, on first glance it seems to be different than Jevido's other bin; sii. This one is x86_64, rather then just 64, is also dinamically linked instead of statically. So, I am just going to assume I won't be able to use my experience from the other one for this one.
 
 Starting at .text, there is a __libc_start_main right there, so this is likely just a C program. Since we've established it's dynamically linked, we don't just get main right here
 ```
