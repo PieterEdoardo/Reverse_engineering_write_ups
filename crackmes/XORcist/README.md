@@ -114,7 +114,7 @@ So with the binary value for `0xDD` being `11011101`, and `0xA9` being `10101001
 |      7       | 0 | 0 |    0    |
 |      8       | 1 | 1 |    0    |
 
-Our resulting binary is `01110100`, which looks promising, because ASCII characters always start with a 0 to be backwards compatible as back in the day ASCII was only 7 bits. Let's look it up! I like to use 
+Our resulting binary is `01110100`, which looks promising, because single byte Unicode supported ASCII characters always start with a 0 to be backwards compatible, as back in the day ASCII was only 7 bits. Let's look it up! I like to use 
 Cyberchef https://cyberchef.org/ for my encoding/decoding needs. and it recognizes the byte right away as the letter 't'. Now I don't want to do every byte by hand so looking online for a tool to automate the process. Using the tool from dcode https://www.dcode.fr/xor-cipher it results the raw data as `ts_pmo_gng_icl`. This doesn't sound like a password, but all the other signs point to that it should be so let's give it a go.
 
 ## Trying the decoded password
@@ -125,6 +125,9 @@ What's the password?
 ts_pmo_gng_icl
 Logged in as root.
 ```
+Great! That was the password! 
 
-## Closing off
-Great! That was the password! Amazing bin, thanks again to S3c_cult for putting this together, was very fun.
+## Conclusion
+This binary took a standard input and compared it to a XOR encoded password that was hidden in the binary as raw data. To solve it, it was required to deconstruct the logical steps and perform the XOR operation in reverse.
+
+Amazing bin, thanks again to S3c_cult for putting this together, was very fun. 
